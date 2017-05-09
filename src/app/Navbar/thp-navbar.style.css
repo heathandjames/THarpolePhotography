@@ -1,7 +1,18 @@
-#thpToggler {
-   text-align: right;
-}
 
 .navbar-brand {
-    font-size: 16px;
+    color: #ffffff;
+
+}
+
+.navbar-brand span {
+    color: #ffcc00;
+}
+
+.navbar-brand:hover{
+    color: #ffffff;
+}
+
+
+.navbar-right {
+    margin-right: 1%;
 }

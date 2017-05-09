@@ -1,25 +1,26 @@
-
-<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
-    <button class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#thpToggler' aria-controls='thpToggler' aria-expanded="false" aria-label='Open Menu'>
-        <span class='navbar-toggler-icon'></span>
-    </button>
-    <div class='col-8'>
-        <a class='navbar-brand' routerLink='/Home'>Timothy Harpole Photography</a>
-    </div>
-    <div class='col-4 collapse navbar-collapse' id='thpToggler'>
-        <ul class='navbar-nav mr-auto mt-2 mt-md-0'>
-            <li class='nav-item active'>
-                <a class='nav-link' routerLink='/Home' routerLinkActive='active'>Home</a>
-            </li>
-            <li class='nav-item'>
-                <a class='nav-link' routerLink='/About' routerLinkActive='active'>About</a>
-            </li>
-            <li class='nav-item'>
-                <a class='nav-link' routerLink='/Gallery' routerLinkActive='active'>Gallery</a>
-            </li>
-            <li class='nav-item'>
-                <a class='nav-link' routerLink='/Contact' routerLinkActive='active'>Contact</a>
-            </li>
-        </ul>
-    </div>
+<nav class="navbar navbar-static-top navbar-default navbar-toggleable-md navbar-inverse bg-inverse">
+       <div class='navbar-header'>
+            <button class='navbar-toggle navbar-toggle-right' type='button' data-toggle='collapse' data-target='#thpToggler' aria-controls='thpToggler' aria-expanded="false" aria-label='Open Menu'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class='navbar-brand' routerLink='/Home'>Timothy Harpole <span>Photography</span></a>
+        </div>
+        <div class='navbar-collapse collapse navbar-right' id='thpToggler'>
+            <ul class='nav navbar-nav'>
+                <li >
+                    <a  routerLink='/Home' routerLinkActive='active'>Home</a>
+                </li>
+                <li >
+                    <a  routerLink='/About' routerLinkActive='active'>About</a>
+                </li>
+                <li >
+                    <a  routerLink='/Gallery' routerLinkActive='active'>Gallery</a>
+                </li>
+                <li >
+                    <a  routerLink='/Contact' routerLinkActive='active'>Contact</a>
+                </li>
+            </ul>
+        </div>
 </nav>
