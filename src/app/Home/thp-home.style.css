@@ -11,7 +11,7 @@ img {
 
 #tagLine {
     position: relative;
-    font: 400 3.5vw 'Arizonia', Helvetica, sans-serif;
+    font: 400 3.5vw Arizonia, Helvetica, sans-serif;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
     width: 100%;
     top: -2.5vw;
