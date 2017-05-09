@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-var isMobile = {
-    Android: function() { return navigator.userAgent.match(/Android/i); },
-    BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
-    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-    Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
-    Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
-    any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } 
-};
+import { THPHomeComponent } from "app/Home/thp-home.component";
+import { THPAboutComponent } from "app/About/thp-about.component";
+import { THPGalleryComponent } from "app/Gallery/thp-gallery.component";
+import { THPContactComponent } from "app/Contact/thp-contact.component";
 
 const routes: Routes = [
-
+    {path: 'Home', component: THPHomeComponent},
+    {path: 'About', component: THPAboutComponent},
+    {path: 'Gallery', component: THPGalleryComponent},
+    {path: 'Contact', component: THPContactComponent},
+    {path: '', redirectTo: '/Home', pathMatch: 'full'}
 ]
 
 @NgModule({

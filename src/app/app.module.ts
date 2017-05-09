@@ -4,8 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {AngularFireModule} from 'angularfire2';
 
+
 import { AppComponent } from './app.component';
+import {THPNavbarComponent} from 'app/Navbar/thp-navbar.component';
 import { THPRouter } from "app/thp-routing.module";
+import { THPHomeComponent } from "app/Home/thp-home.component";
+import { THPAboutComponent } from "app/About/thp-about.component";
+import { THPGalleryComponent } from "app/Gallery/thp-gallery.component";
+import { THPContactComponent } from "app/Contact/thp-contact.component";
 
 var firebaseconfig = {
     apiKey: "AIzaSyBE6m9LDJbVbkLVxc5Yy0IXLEB8fbJvGpw",
@@ -16,16 +22,22 @@ var firebaseconfig = {
     messagingSenderId: "629731350396"
   };
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    THPNavbarComponent,
+    THPHomeComponent,
+    THPAboutComponent,
+    THPGalleryComponent,
+    THPContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     THPRouter,
-    AngularFireModule.initializeApp(firebaseconfig)   
+    AngularFireModule.initializeApp(firebaseconfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
