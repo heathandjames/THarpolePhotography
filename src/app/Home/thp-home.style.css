@@ -1,0 +1,118 @@
+
+img {
+    -webkit-filter: grayscale(100%) sepia(10%);
+    filter: grayscale(100%) sepia(10%);
+}
+
+.jumbotron {
+    border-radius: 0;
+    margin-top: -4.5vw;
+}
+
+#tagLine {
+    position: relative;
+    font: 400 3.5vw 'Arizonia', Helvetica, sans-serif;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    width: 100%;
+    top: -2.5vw;
+    left: 15vw;
+    color: white;
+}
+/*------------------------ CUSTOMS ------------------------------ */
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #tagLine{
+        top: -3.5vw;
+        font-size: 5vw;
+        left: 8vw;
+    }
+
+    .jumbotron {
+        margin-top: -6.5vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    #tagLine {
+        top: -4vw;
+        font-size: 5.5vw;
+        left: 5vw;
+    }
+    .jumbotron{
+        margin-top: -7vw;
+    }
+}

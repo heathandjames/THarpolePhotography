@@ -5,4 +5,8 @@ import {Component} from '@angular/core';
     styleUrls: ['./thp-home.style.css'],
     templateUrl: './thp-home.template.html'
 })
-export class THPHomeComponent {}
+export class THPHomeComponent {
+    constructor(){
+        
+    }
+}
