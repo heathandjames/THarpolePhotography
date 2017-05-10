@@ -6,12 +6,15 @@ img {
 
 .jumbotron {
     border-radius: 0;
-    margin-top: -4.5vw;
+    margin-top: -5vw;
 }
 
 #tagLine {
     position: relative;
-    font: 400 3.5vw Arizonia, Helvetica, sans-serif;
+    font-family: 'Arizonia', 'Helvetica', 'sans-serif';
+    font-weight:400; 
+    font-size: 3.5vw;
+    font-style: normal;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
     width: 100%;
     top: -2.5vw;
@@ -97,7 +100,7 @@ img {
     }
 
     .jumbotron {
-        margin-top: -6.5vw;
+        margin-top: -7vw;
     }
 }
 
@@ -113,6 +116,6 @@ img {
         left: 5vw;
     }
     .jumbotron{
-        margin-top: -7vw;
+        margin-top: -8vw;
     }
 }
