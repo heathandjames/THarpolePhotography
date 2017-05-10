@@ -12,6 +12,8 @@ import { THPHomeComponent } from "app/Home/thp-home.component";
 import { THPAboutComponent } from "app/About/thp-about.component";
 import { THPGalleryComponent } from "app/Gallery/thp-gallery.component";
 import { THPContactComponent } from "app/Contact/thp-contact.component";
+import { THPSignonComponent } from "app/Admin/SignOn/thp-signon.component";
+import { THPAdminComponent } from "app/Admin/thp-admin.component";
 
 var firebaseconfig = {
     apiKey: "AIzaSyBE6m9LDJbVbkLVxc5Yy0IXLEB8fbJvGpw",
@@ -30,7 +32,9 @@ var firebaseconfig = {
     THPHomeComponent,
     THPAboutComponent,
     THPGalleryComponent,
-    THPContactComponent
+    THPContactComponent,
+    THPAdminComponent,
+    THPSignonComponent
   ],
   imports: [
     BrowserModule,
