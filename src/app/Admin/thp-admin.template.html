@@ -1,3 +1,6 @@
 <div>
-    <thp-signon></thp-signon>
+  <input type="file" accept="image/*" (change)='generateSamples(fileUpload)' multiple #fileUpload>
+  <img src="" height="100" alt="thumbnail" id='thumbnail'>
+  <img src="" height="250" alt="Image preview..." id='preview'>
+  <img src="" height="100" alt='Loaded Image' id='loadedImg'>
 </div>

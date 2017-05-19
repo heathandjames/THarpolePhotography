@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'thp-signon',
@@ -6,7 +7,12 @@ import {Component} from '@angular/core';
 })
 
 export class THPSignonComponent {
-    constructor (){
+    constructor (private router:Router){
+        this.router = router;
+    }
 
+    loginUser(userName:string, passWord:string){
+        //to do login 
+        this.router.navigate(['/Admin/Upload']);
     }
 }

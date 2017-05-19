@@ -9,21 +9,19 @@
             
             <div class='row'>
                 <div class='col-12' style='text-align: center; margin-top: 25px;'>
-                    <input type='text' id='userName' style='border-radius: 4px; width: 150px;' placeholder='Username'/>
+                    <input type='text' id='userName' style='border-radius: 4px; width: 150px;' placeholder='Username' #userName/>
                 </div>
             </div>
             <div class='row'>
                 <div class='col-12' style='text-align: center; margin-top: 15px;'>
-                    <input type='password' id='password' style='border-radius: 4px; width: 150px;' placeholder='Password'/>
+                    <input type='password' id='password' style='border-radius: 4px; width: 150px;' placeholder='Password' #passWord/>
                 </div>
             </div>
             <div class='row' style='height: 200px; margin-top: 15px;'>
                 <div class='col-12' style='text-align:center;'>
-                <button style='width: 150px;'>Login</button>
+                <button style='width: 150px;' (click)='loginUser(userName.value, passWord.value);'>Login</button>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>

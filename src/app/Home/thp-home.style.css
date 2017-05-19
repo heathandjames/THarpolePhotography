@@ -6,19 +6,19 @@ img {
 
 .jumbotron {
     border-radius: 0;
-    margin-top: -5vw;
+    margin-top: -9.7rem;
 }
 
 #tagLine {
     position: relative;
     font-family: 'Arizonia', 'Helvetica', 'sans-serif';
     font-weight:400; 
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     font-style: normal;
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-    width: 100%;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.4);
+    width: 90%;
+    text-align: center;
     top: -2.5vw;
-    left: 15vw;
     color: white;
 }
 /*------------------------ CUSTOMS ------------------------------ */
@@ -95,8 +95,8 @@ img {
   and (orientation: portrait) { 
     #tagLine{
         top: -3.5vw;
-        font-size: 5vw;
-        left: 8vw;
+        font-size: 4vw;
+        left: 5vw;
     }
 
     .jumbotron {
@@ -112,7 +112,7 @@ img {
   and (orientation: landscape) { 
     #tagLine {
         top: -4vw;
-        font-size: 5.5vw;
+        font-size: 4.5vw;
         left: 5vw;
     }
     .jumbotron{
