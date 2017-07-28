@@ -10,4 +10,8 @@ export class THPAboutComponent {
     constructor(){
 
     }
+
+    doClick(){
+      console.log('clicked');
+    }
 }

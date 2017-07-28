@@ -22,4 +22,6 @@ const routes: Routes = [
     exports: [RouterModule],
     providers: []
 })
-export class THPRouter {}
+export class THPRouter {
+    
+}

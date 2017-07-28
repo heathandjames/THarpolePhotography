@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {AngularFireModule} from 'angularfire2';
 
+import {PhotoService} from './Services/PhotoService'
+import {LoginService} from './Services/LoginService'
 
 import { AppComponent } from './app.component';
 import {THPNavbarComponent} from 'app/Navbar/thp-navbar.component';
@@ -15,6 +17,7 @@ import { THPContactComponent } from "app/Contact/thp-contact.component";
 import { THPSignonComponent } from "app/Admin/SignOn/thp-signon.component";
 import { THPAdminComponent } from "app/Admin/thp-admin.component";
 import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireAuth } from "angularfire2/auth";
 
 var firebaseconfig = {
     apiKey: "AIzaSyBE6m9LDJbVbkLVxc5Yy0IXLEB8fbJvGpw",
@@ -45,7 +48,7 @@ var firebaseconfig = {
     AngularFireModule.initializeApp(firebaseconfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AngularFireAuth, LoginService],
   bootstrap: [AppComponent]
 })
 

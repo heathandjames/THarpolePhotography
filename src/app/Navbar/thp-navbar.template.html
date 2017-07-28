@@ -7,7 +7,7 @@
             </button>
             <a class='navbar-brand' routerLink='/Home'>Timothy Harpole <span>Photography</span></a>
         </div>
-        <div class='navbar-collapse collapse navbar-right' id='thpToggler'>
+        <div *ngIf='!isAdminMenu' class='navbar-collapse collapse navbar-right col-md-5' id='thpToggler'>
             <ul class='nav navbar-nav'>
                 <li >
                     <a  routerLink='/Home' routerLinkActive='active'>Home</a>
@@ -23,4 +23,35 @@
                 </li>
             </ul>
         </div>
+        <div *ngIf='isAdminMenu' class='navbar-collapse collapse navbar-right col-md-6' id='thpToggler'>
+            <ul class='nav navbar-nav'>
+                <li >
+                    <a  routerLink='/Admin/Upload' routerLinkActive='active'>File Upload</a>
+                </li>
+                <li >
+                    <a  routerLink='/About' routerLinkActive='active'>Gallery Manager</a>
+                </li>
+                <li >
+                    <a  routerLink='/Gallery' routerLinkActive='active'>Site Manager</a>
+                </li>
+                <li >
+                    <a  routerLink='/Contact' routerLinkActive='active'>Contact Manager</a>
+                </li>
+                <li >
+                    <a  (click)='signOut()'>Sign Out</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+        <style>
+                .btn{
+
+                    padding: 0;
+                    margin-top: 10px;
+                    height: 25px;
+                    width: 80px;
+                    font-weight: 600;
+                }
+            </style>
 </nav>

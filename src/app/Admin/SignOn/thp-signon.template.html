@@ -9,12 +9,12 @@
             
             <div class='row'>
                 <div class='col-12' style='text-align: center; margin-top: 25px;'>
-                    <input type='text' id='userName' style='border-radius: 4px; width: 150px;' placeholder='Username' #userName/>
+                    <input (keypress)='keyPressed($event, userName.value, passWord.value)' type='text' id='userName' style='border-radius: 4px; width: 150px;' placeholder='Username' #userName/>
                 </div>
             </div>
             <div class='row'>
                 <div class='col-12' style='text-align: center; margin-top: 15px;'>
-                    <input type='password' id='password' style='border-radius: 4px; width: 150px;' placeholder='Password' #passWord/>
+                    <input (keypress)='keyPressed($event, userName.value, passWord.value)' type='password' id='password' style='border-radius: 4px; width: 150px;' placeholder='Password' #passWord/>
                 </div>
             </div>
             <div class='row' style='height: 200px; margin-top: 15px;'>

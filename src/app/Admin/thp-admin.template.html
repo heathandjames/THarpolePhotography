@@ -1,6 +1,81 @@
-<div>
-  <input type="file" accept="image/*" (change)='generateSamples(fileUpload)' multiple #fileUpload>
-  <img src="" height="100" alt="thumbnail" id='thumbnail'>
-  <img src="" height="250" alt="Image preview..." id='preview'>
-  <img src="" height="100" alt='Loaded Image' id='loadedImg'>
+<div style='height: 100%;'>
+  <div class='jumbotron' style='height: 30%'>
+      <input #fileUpload type='file' multiple style='display:none' id='fileBox' (change)='generateFilesList(fileUpload)'/>
+      <div class='row'>
+        <div class='col-md-7'>
+          <h3>File Uploader</h3>
+        </div>
+        <div class='col-md-5  btn-group'>
+          <button (click)='addFiles()' class='btn btn-success'><i class='glyphicon glyphicon-add'></i>Add Files</button>
+          <button class='btn btn-info' disabled='disabled'>Upload</button>
+          <button class='btn btn-warning'>Cancel</button>
+        </div>
+        
+      </div>
+      <div class='row'>
+        <div class='col-md-5 col-md-push-7'>
+          <div class='progress' style='margin-top: 10px;'>
+            <div class='progress-bar progress-bar-warning' role='progressbar' [attr.aria-valuenow]='overallProgress' aria-valuemin='0' aria-valuemax='100' style='width: {{overallProgress}}%'>{{overallProgress}}%</div>
+          </div>
+        </div>
+      </div>
+      
+        
+    </div>
+    <div class='row' style='height: 100%; overflow-y: auto; max-height: 500px; margin-top: -30px;'>
+        <table style='width: 100%;'>
+          <tbody>
+          <tr [hidden]='filesList.length <= 0' *ngFor='let fileItem of filesList'>
+            <td>
+            <div class='col-md-4'>
+              <img src='{{fileItem.thumb}}' alt='140x140' class='img img-rounded' />
+              File Name
+              <label>Size</label><span>{{(fileItem.size)/1024}} KB</span>
+            </div>
+            <div [hidden]='!fileItem.loading' class='col-md-6'>
+              <div class='progress' style='margin-top: 10px;'>
+                <div class='progress-bar progress-bar-success' role='progressbar' [attr.aria-valuenow]='fileItem.progress' aria-valuemin='0' aria-valuemax='100' [style.width]='fileItem.progress + "%"'>{{fileItem.progress}}%</div>
+              </div>
+            </div>
+            
+            <button (click)='removeItem(fileItem)' [disabled]='fileItem.progress >= 100' class='col-md-1 col-md-push-1 close-link'><span><i class='glyphicon glyphicon-remove'></i></span></button>
+            </td>
+          </tr>
+          </tbody>
+          
+        </table>
+      </div>
+      	<style>
+            .jumbotron {
+              margin-top: -20px;
+            }
+			button:focus {
+				outline:0;
+			}
+			.close-link{
+				font-size: 16px;
+				border: none;
+				background-color: transparent;
+				transition: font-size 0.2s;
+			}
+			.close-link:not([disabled]):hover {
+				font-size: 22px;
+				color: #EE5555;
+			}
+
+			.btn {
+				width: 102px;
+			}
+			.img {
+				height: 140px;
+				
+				background-color: grey;
+			}
+
+			td {
+				padding: 10px;
+				border-bottom: solid rgba(50, 50, 50, 0.3) 5px;
+        background-color: #EEEEEE;
+			}
+		</style>
 </div>
